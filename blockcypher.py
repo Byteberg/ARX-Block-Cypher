@@ -1,6 +1,6 @@
 import hashlib
 import random
-version = "v2025.06.12_21:07d"
+version = "v2025.06.18_22:07"
 class block_cypher_parts():
     first_block = ""
 
@@ -351,14 +351,3 @@ class block_cypher_parts():
 
         return output_plaintext_aray
 
-
-Text = "test1"
-pw = "password"
-blockcypher = block_cypher_parts()
-pw_array_liste = blockcypher.pw_list_gen(pw)
-first_block = blockcypher.get_rand_bytearray(512)
-cyphertext = blockcypher.cbc_mode_cypher_verschlüsseln(bytearray(Text,"UTF-8"),first_block,True,blockcypher.pw_array_liste)
-print(cyphertext)
-print(len(cyphertext))
-plaintext = blockcypher.cbc_mode_cypher_entschlüsseln(cyphertext,first_block,blockcypher.pw_array_liste,True)
-print(plaintext)
