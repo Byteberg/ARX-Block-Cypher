@@ -1,6 +1,6 @@
 import hashlib
 import random
-version = "v2025.06.12_21:07"
+version = "v2025.06.12_21:07d"
 class block_cypher_parts():
     first_block = ""
 
